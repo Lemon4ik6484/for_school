@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(255, 250, 205);
+    margin: 20px;
+  }
+  
+  .container_{
+    display: flex;
+  }
+  
+  .lesson{
+    flex-grow: 3;
+    padding: 0px;
+  }
+  
+  .no_link{
+    color: #fff;
+  }
+
+  .join{
+    background: #0e72ed;
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 32px;
+    margin-top: 12px;
+    padding: 8px 40px;
+    text-align: center;
+  }
+
+  a:link { text-decoration: none; }
+
+
+  a:visited { text-decoration: none; }
+
+
+  a:hover { text-decoration: none; }
+
+
+  a:active { text-decoration: none; }
+
+  * {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    }
