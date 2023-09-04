@@ -63,5 +63,27 @@ body{
     }
   
   .box{
-    padding: 20px;
+    padding: 13px;
+  }
+
+  p{
+    text-align: center;
+  }
+
+  .top{
+    display: flex;
+    flex: top;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
+    text-align: center;
+  }
+
+  .bottom{
+    display: flex;
+    flex: bottom;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000000;
+    text-align: center;
   }
