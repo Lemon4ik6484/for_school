@@ -61,3 +61,7 @@ body{
   * {
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
     }
+  
+  .box{
+    padding: 20px;
+  }
