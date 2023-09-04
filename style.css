@@ -16,6 +16,24 @@ body{
     color: #fff;
   }
 
+  .no_link_black{
+    color: #000000;
+  }
+
+  .link_button{
+    background: #ffea76;
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 32px;
+    margin-top: 12px;
+    padding: 8px 40px;
+    text-align: center;
+  }
+
   .join{
     background: #0e72ed;
     border-radius: 12px;
