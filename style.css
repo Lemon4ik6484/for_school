@@ -54,10 +54,14 @@ body{
     }
   
   .box{
-    padding: 12px;
+    padding: 11px 12px;
   }
 
   p{
+    text-align: center;
+  }
+
+  h1{
     text-align: center;
   }
 
