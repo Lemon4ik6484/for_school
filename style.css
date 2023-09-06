@@ -82,3 +82,11 @@ body{
     border-top-color: #000000;
     text-align: center;
   }
+
+   @media screen and (max-width: 1024px) {
+
+    .table_body{
+      padding: 100% auto;
+    }
+
+   }
