@@ -63,7 +63,7 @@ body {
   align-items: center;
 } */
 
-.lesson {
+.lesson_time_box {
   display: flex;
   flex-direction: column;
   align-items: center;
