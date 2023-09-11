@@ -7,7 +7,7 @@ import { lessonsTime } from "./time.js";
 
 const headerTextRef = document.querySelector(".header_text");
 const lessonsTimeRef = document.querySelector(".lessons_time");
-const lessonsRef = document.querySelector(".lessons");
+const lessonsRef = document.querySelectorAll(".lessons");
 
 const timetoMinutes = (time, delimiter) => {
   const timeParts = time.split(delimiter);
@@ -16,14 +16,18 @@ const timetoMinutes = (time, delimiter) => {
 
 const updateTime = () => {
   const curDate = new Date();
-  const curTime = curDate.toLocaleTimeString("uk-UK", {
+  const curTime = curDate.toLocaleTimeString("uk-UA", {
     hour: "2-digit",
     minute: "2-digit",
+    hour12: false,
+    timeZone: "Europe/Kyiv", // Antarctica/South_Pole Europe/Kyiv
   });
   headerTextRef.textContent = `Київський час: ${curTime}`;
 
   const curDay = curDate.getDay();
-  if (curDay > 0 && curDay < 5) {
+  const dayRef = lessonsRef[curDay - 1];
+
+  if (curDay > 0 && curDay < 6) {
     const curLesson = lessonsTime.findIndex(
       (lesson) =>
         timetoMinutes(curTime, ":") >= timetoMinutes(lesson.start, ".") &&
@@ -35,17 +39,18 @@ const updateTime = () => {
       nextLesson = lessonsTime.findIndex(
         (lesson, idx, lessons) =>
           idx !== lessons.length - 1 &&
-          curTime > lesson.end &&
-          curTime < lessons[idx + 1],
+          timetoMinutes(curTime, ":") > timetoMinutes(lesson.end, ".") &&
+          timetoMinutes(curTime, ":") <
+            timetoMinutes(lessons[idx + 1].start, "."),
       );
+
     if (curLesson !== -1) {
-      const curLessonTimeRef =
-        lessonsTimeRef.querySelectorAll(".lesson_time")[curLesson];
-      curLessonTimeRef.classList.toggle("now");
+      const lessonRef = dayRef.querySelectorAll(".lesson")[curLesson];
+      lessonRef.classList.toggle("now");
     }
     if (nextLesson !== -1) {
-      const nextLessonTimeRef = lessonsTimeRef.children[nextLesson];
-      nextLessonTimeRef.classList.toggle("later");
+      const lessonRef = dayRef.querySelectorAll(".lesson")[nextLesson + 1];
+      lessonRef.classList.toggle("later");
     }
   }
 };
