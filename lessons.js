@@ -27,7 +27,7 @@ export const lessons = [
   {
     name: "ukrliterature",
     title: "Українська література",
-    link: "",
+    link: "https://us05web.zoom.us/j/8525252562?pwd=UytGVTVLV2RFWnh6bGU4RTFGU1FUdz09",
   },
   {
     name: "ukrlanguage",
