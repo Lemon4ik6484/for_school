@@ -2,7 +2,7 @@ export const lessons = [
   {
     name: "physics",
     title: "Фізика",
-    link: "",
+    link: "https://us04web.zoom.us/j/7307121287?pwd=biPOes4HCKuaRBRL1zVUFX335qEppI.1",
   },
   {
     name: "algebra",
@@ -77,7 +77,7 @@ export const lessons = [
   {
     name: "physicaleducation",
     title: "Фізична культура",
-    link: "",
+    link: "https://us04web.zoom.us/j/4786617178?pwd=UUx2cGc0eENDdnhkeXJHc0pTcmVCQT09",
   },
   {
     name: "arts",
