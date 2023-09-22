@@ -106,3 +106,7 @@ h1 {
 .later {
   background-color: #ffbf76;
 }
+
+.no_margin{
+  margin: 0px;
+}
