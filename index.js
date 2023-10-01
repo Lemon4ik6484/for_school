@@ -29,9 +29,9 @@ const updateTime = () => {
 
   if (curDay > 0 && curDay < 6) {
     const curLesson = lessonsTime.findIndex(
-      (lesson) =>
-        timetoMinutes(curTime, ":") >= timetoMinutes(lesson.start, ".") &&
-        timetoMinutes(curTime, ":") <= timetoMinutes(lesson.end, "."),
+      (lessonTime) =>
+        timetoMinutes(curTime, ":") >= timetoMinutes(lessonTime.start, ".") &&
+        timetoMinutes(curTime, ":") <= timetoMinutes(lessonTime.end, "."),
     );
 
     let nextLesson = -1;
@@ -46,16 +46,21 @@ const updateTime = () => {
 
     if (curLesson !== -1) {
       const lessonRef = dayRef.querySelectorAll(".lesson")[curLesson];
-      lessonRef.classList.toggle("now");
+      if (lessonRef.innerHTML) lessonRef.classList.toggle("now");
     }
     if (nextLesson !== -1) {
       const lessonRef = dayRef.querySelectorAll(".lesson")[nextLesson + 1];
-      lessonRef.classList.toggle("later");
+      if (lessonRef.innerHTML) lessonRef.classList.toggle("later");
     }
   }
 };
 
+const clearColors = () => {
+  lessonsRef.forEach((lesson) => lesson.classList.remove(["now", "later"]));
+};
+
 setInterval(updateTime, 1000);
+setInterval(clearColors, 20000);
 
 lessonsTimeRef.innerHTML = '<td class="box"></td>';
 lessonsTime.forEach((lesson, idx) => {
@@ -89,3 +94,4 @@ lessons.forEach((lesson) => {
 });
 
 clearInterval(updateTime);
+clearInterval(clearColors);
