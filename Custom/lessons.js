@@ -94,4 +94,9 @@ export const lessons = [
     title: "Vie de classe",
     link: "",
   },
+  {
+    name: "none",
+    title: " ",
+    link: "",
+  }
 ];
