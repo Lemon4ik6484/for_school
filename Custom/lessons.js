@@ -75,9 +75,9 @@ export const lessons = [
     link: "https://us05web.zoom.us/j/5282604925?pwd=OEViMkxNTTRLb3p4MnpUN0NKck5HZz09",
   },
   {
-    name: "physicaleducation",
-    title: "Фізична культура",
-    link: "https://us04web.zoom.us/j/4786617178?pwd=UUx2cGc0eENDdnhkeXJHc0pTcmVCQT09",
+    name: "EPS",
+    title: "Спорт",
+    link: "",
   },
   {
     name: "arts",

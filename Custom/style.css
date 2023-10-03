@@ -110,3 +110,15 @@ h1 {
 .no_margin{
   margin: 0px;
 }
+
+.fr{
+  background-color: rgb(0, 184, 184);
+}
+
+.ua{
+  background-color: coral;
+}
+
+.ua_fr{
+  background-color: #b8ff76;
+}
