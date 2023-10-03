@@ -2,7 +2,7 @@ export const lessons = [
   {
     name: "physics",
     title: "Фізика",
-    link: "https://us04web.zoom.us/j/7307121287?pwd=biPOes4HCKuaRBRL1zVUFX335qEppI.1",
+    link: "https://us04web.zoom.us/j/71160338554?pwd=cuRM5DuC4C5wbYVRs4U02ELBCngCLA.1",
   },
   {
     name: "algebra",
