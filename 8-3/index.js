@@ -21,7 +21,7 @@ const updateTime = () => {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
-    timeZone: "Antarctica/South_Pole", // Antarctica/South_Pole Europe/Kyiv
+    timeZone: "Europe/Kyiv", // Antarctica/South_Pole Europe/Kyiv
   });
   headerTextRef.textContent = `Київський час: ${curTime}`;
 
