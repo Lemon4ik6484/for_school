@@ -7,7 +7,8 @@ import { lessonsTime } from "./time.js";
 
 const headerTextRef = document.querySelector(".header_text");
 const lessonsTimeRef = document.querySelector(".lessons_time");
-const lessonsRef = document.querySelectorAll(".lessons");
+const lessonsDayRef = document.querySelectorAll(".lessons");
+const lessonsRef = document.querySelectorAll(".lesson");
 
 const timetoMinutes = (time, delimiter) => {
   const timeParts = time.split(delimiter);
@@ -20,12 +21,12 @@ const updateTime = () => {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
-    timeZone: "Europe/Kyiv", // Antarctica/South_Pole Europe/Kyiv
+    timeZone: "Antarctica/South_Pole", // Antarctica/South_Pole Europe/Kyiv
   });
   headerTextRef.textContent = `Київський час: ${curTime}`;
 
   const curDay = curDate.getDay();
-  const dayRef = lessonsRef[curDay - 1];
+  const dayRef = lessonsDayRef[curDay - 1];
 
   if (curDay > 0 && curDay < 6) {
     const curLesson = lessonsTime.findIndex(
@@ -93,5 +94,3 @@ lessons.forEach((lesson) => {
   });
 });
 
-clearInterval(updateTime);
-clearInterval(clearColors);
