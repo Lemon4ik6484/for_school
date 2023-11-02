@@ -99,12 +99,12 @@ h1 {
   text-align: center;
 }
 
-.now {
-  background-color: #b8ff76;
-}
-
 .later {
   background-color: #ffbf76;
+}
+
+.now {
+  background-color: #b8ff76;
 }
 
 .no_margin{
