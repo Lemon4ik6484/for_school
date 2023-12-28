@@ -1,6 +1,16 @@
 body {
   background-color: rgb(255, 250, 205);
+  color: #000000;
   margin: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+body.darkMode {
+    background-color: rgb(43, 41, 27);
 }
 
 .container_ {
@@ -10,16 +20,6 @@ body {
 .lesson {
   flex-grow: 3;
   padding: 0px;
-}
-
-.no_link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.no_link_black {
-  color: #000000;
-  text-decoration: none;
 }
 
 .link_button {
@@ -107,6 +107,41 @@ h1 {
   background-color: #b8ff76;
 }
 
-.no_margin{
+table.darkMode .later {
+  background-color: #955711;
+}
+
+table.darkMode .now {
+  background-color: #418700;
+}
+
+.no_margin {
   margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.darkMode {
+  color: #ffea76;
+  border-color: #0e72ed;
+}
+
+.sun{
+  background-image: url(sun.png);
+  background-size: 32px;
+  height: 32px;
+  width: 32px;
+  margin: 5px 5px 5px 5px;
+}
+
+.moon{
+  background-image: url(moon.png);
+}
+
+#theme_button{
+  display: flex;
+  align-self: flex-end;
 }

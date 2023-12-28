@@ -85,7 +85,7 @@ lessons.forEach((lesson) => {
     lessonRef.insertAdjacentHTML(
       "afterbegin",
       `<strong>
-      <a href="${lesson.link}" target="_blank" class="no_link_black">
+      <a href="${lesson.link}" target="_blank">
       ${lesson.title}
       </a>
       </strong>
@@ -94,3 +94,32 @@ lessons.forEach((lesson) => {
   });
 });
 
+const themeBtn = document.getElementById("theme_button");
+themeBtn.onclick = () => {
+  themeBtn.classList.toggle("moon");
+  if (themeBtn.classList.contains("moon")) {
+    document.body.classList.add("darkMode");
+    document.body.querySelector("table").classList.add("darkMode");
+    document.body
+      .querySelectorAll("a")
+      .forEach((link) => link.classList.add("darkMode"));
+    document.body
+      .querySelectorAll("div.top")
+      .forEach((div) => div.classList.add("darkMode"));
+    document.body
+      .querySelectorAll("div.bottom")
+      .forEach((div) => div.classList.add("darkMode"));
+  } else {
+    document.body.classList.remove("darkMode");
+    document.body.querySelector("table").classList.remove("darkMode");
+    document.body
+      .querySelectorAll("a")
+      .forEach((link) => link.classList.remove("darkMode"));
+    document.body
+      .querySelectorAll("div.top")
+      .forEach((div) => div.classList.remove("darkMode"));
+    document.body
+      .querySelectorAll("div.bottom")
+      .forEach((div) => div.classList.remove("darkMode"));
+  }
+};
