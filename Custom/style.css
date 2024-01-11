@@ -1,6 +1,16 @@
 body {
   background-color: rgb(255, 250, 205);
+  color: #000000;
   margin: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+body.darkMode {
+  background-color: rgb(43, 41, 27);
 }
 
 .container_ {
@@ -100,15 +110,51 @@ h1 {
 }
 
 .fr{
-  background-color: rgb(52, 218, 218);
+  background-color: rgb(255, 250, 205);
+  border: solid 5px;
+  border-color: rgb(52, 218, 218);
 }
 
 .ua{
-  background-color: rgb(255, 159, 80);
+  background-color: rgb(255, 250, 205);
+  border: solid 5px;
+  border-color: rgb(255, 159, 80);
 }
 
 .ua_fr{
-  background-color: #76db17;
+  background-color: rgb(255, 250, 205);
+  border: solid 5px;
+  border-color: #76db17;
+}
+
+.lil_text.fr{
+  background-color: rgb(52, 218, 218);
+}
+
+.lil_text.ua{
+  background-color: rgb(255, 159, 80);
+}
+
+.lil_text.ua_fr{
+  background-color:  #76db17;
+}
+
+table.darkMode .fr{
+  background-color: rgb(43, 41, 27);
+  border: solid 5px;
+  border-color: rgb(5, 173, 173);
+}
+
+table.darkMode .ua{
+  background-color: rgb(43, 41, 27);
+  border: solid 5px;
+  border-color: rgb(216, 105, 14);
+}
+
+table.darkMode .ua_fr{
+  background-color: rgb(43, 41, 27);
+  border: solid 5px;
+  border-color: #62b614;
 }
 
 .now {
@@ -118,6 +164,46 @@ h1 {
   background-color: #ffbf76;
 }
 
+table.darkMode .later {
+  background-color: #955711;
+}
+
+table.darkMode .now {
+  background-color: #418700;
+}
+
 .lil_text{
   width: 300px;
+  color:#000
+}
+
+.no_margin {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.darkMode {
+  color: #ffea76;
+  border-color: #0e72ed;
+}
+
+.sun{
+  background-image: url(sun.png);
+  background-size: 32px;
+  height: 32px;
+  width: 32px;
+  margin: 5px 5px 5px 5px;
+}
+
+.moon{
+  background-image: url(moon.png);
+}
+
+#theme_button{
+  display: flex;
+  align-self: flex-end;
 }
