@@ -9,6 +9,9 @@ const headerTextRef = document.querySelector(".header_text");
 const lessonsTimeRef = document.querySelector(".lessons_time");
 const lessonsRef = document.querySelectorAll(".lessons");
 
+const themeBtn = document.getElementById("theme_button");
+const darkModeKey = "darkModeEnabled";
+
 const timetoMinutes = (time, delimiter) => {
   const timeParts = time.split(delimiter);
   return Number(timeParts[0]) * 60 + Number(timeParts[1]);
@@ -93,32 +96,49 @@ lessons.forEach((lesson) => {
   });
 });
 
-const themeBtn = document.getElementById("theme_button");
+const enableDarkMode = () => {
+  document.body.classList.add("darkMode");
+  document.body.querySelector("table").classList.add("darkMode");
+  document.body
+    .querySelectorAll("a")
+    .forEach((link) => link.classList.add("darkMode"));
+  document.body
+    .querySelectorAll("div.top")
+    .forEach((div) => div.classList.add("darkMode"));
+  document.body
+    .querySelectorAll("div.bottom")
+    .forEach((div) => div.classList.add("darkMode"));
+
+  localStorage.setItem(darkModeKey, "true");
+};
+
+const disableDarkMode = () => {
+  document.body.classList.remove("darkMode");
+  document.body.querySelector("table").classList.remove("darkMode");
+  document.body
+    .querySelectorAll("a")
+    .forEach((link) => link.classList.remove("darkMode"));
+  document.body
+    .querySelectorAll("div.top")
+    .forEach((div) => div.classList.remove("darkMode"));
+  document.body
+    .querySelectorAll("div.bottom")
+    .forEach((div) => div.classList.remove("darkMode"));
+
+  localStorage.setItem(darkModeKey, "false");
+};
+
+const isDarkModeEnabled = localStorage.getItem(darkModeKey) === "true";
+if (isDarkModeEnabled) {
+  themeBtn.classList.add("moon");
+  enableDarkMode();
+}
+
 themeBtn.onclick = () => {
   themeBtn.classList.toggle("moon");
   if (themeBtn.classList.contains("moon")) {
-    document.body.classList.add("darkMode");
-    document.body.querySelector("table").classList.add("darkMode");
-    document.body
-      .querySelectorAll("a")
-      .forEach((link) => link.classList.add("darkMode"));
-    document.body
-      .querySelectorAll("div.top")
-      .forEach((div) => div.classList.add("darkMode"));
-    document.body
-      .querySelectorAll("div.bottom")
-      .forEach((div) => div.classList.add("darkMode"));
+    enableDarkMode();
   } else {
-    document.body.classList.remove("darkMode");
-    document.body.querySelector("table").classList.remove("darkMode");
-    document.body
-      .querySelectorAll("a")
-      .forEach((link) => link.classList.remove("darkMode"));
-    document.body
-      .querySelectorAll("div.top")
-      .forEach((div) => div.classList.remove("darkMode"));
-    document.body
-      .querySelectorAll("div.bottom")
-      .forEach((div) => div.classList.remove("darkMode"));
+    disableDarkMode();
   }
 };
