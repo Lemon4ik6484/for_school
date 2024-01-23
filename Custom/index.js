@@ -134,6 +134,8 @@ if (isDarkModeEnabled) {
   enableDarkMode();
 }
 
+document.body.classList.remove("temporary-dark");
+
 themeBtn.onclick = () => {
   themeBtn.classList.toggle("moon");
   if (themeBtn.classList.contains("moon")) {

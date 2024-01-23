@@ -4,6 +4,10 @@ body {
   margin: 20px;
 }
 
+.temporary-dark{
+  background-color: rgb(43, 41, 27);
+}
+
 header {
   display: flex;
   flex-direction: column;
