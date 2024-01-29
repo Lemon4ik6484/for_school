@@ -144,3 +144,11 @@ themeBtn.onclick = () => {
     disableDarkMode();
   }
 };
+
+function autoReload() {
+  setTimeout(function() {
+    location.reload();
+  }, 5000);
+}
+
+window.onload = autoReload;
