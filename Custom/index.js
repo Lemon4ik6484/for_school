@@ -148,7 +148,7 @@ themeBtn.onclick = () => {
 function autoReload() {
   setTimeout(function() {
     location.reload();
-  }, 5000);
+  }, 600000);
 }
 
 window.onload = autoReload;
