@@ -103,5 +103,10 @@ export const lessons = [
     name: "FLE",
     title: "FLE",
     link: "",
+  },
+  {
+    name: "litt",
+    title: "Literature",
+    link: "",
   }
 ];
