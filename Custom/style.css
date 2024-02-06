@@ -1,5 +1,6 @@
 body {
   background-color: rgb(255, 250, 205);
+  background-image: url(conf.gif);
   color: #000000;
   margin: 20px;
 }
@@ -15,6 +16,7 @@ header {
 
 body.darkMode {
   background-color: rgb(43, 41, 27);
+  background-image: url(snow.gif);
 }
 
 .container_ {
@@ -144,19 +146,19 @@ h1 {
 }
 
 table.darkMode .fr{
-  background-color: rgb(43, 41, 27);
+  background-color: rgba(43, 41, 27, 0);
   border: solid 5px;
   border-color: rgb(5, 173, 173);
 }
 
 table.darkMode .ua{
-  background-color: rgb(43, 41, 27);
+  background-color: rgba(43, 41, 27, 0);
   border: solid 5px;
   border-color: rgb(216, 105, 14);
 }
 
 table.darkMode .ua_fr{
-  background-color: rgb(43, 41, 27);
+  background-color: rgba(43, 41, 27, 0);
   border: solid 5px;
   border-color: #62b614;
 }
@@ -178,6 +180,7 @@ table.darkMode .now {
 
 .lil_text{
   width: 300px;
+  height: 15px;
   color:#000
 }
 
@@ -210,4 +213,7 @@ a {
 #theme_button{
   display: flex;
   align-self: flex-end;
+  position: absolute;
+  top: 5%;
+  right: 7%;
 }
