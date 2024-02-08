@@ -1,6 +1,5 @@
 body {
   background-color: rgb(255, 250, 205);
-  background-image: url(conf.gif);
   color: #000000;
   margin: 20px;
 }
@@ -16,7 +15,6 @@ header {
 
 body.darkMode {
   background-color: rgb(43, 41, 27);
-  background-image: url(snow.gif);
 }
 
 .container_ {
@@ -216,4 +214,40 @@ a {
   position: absolute;
   top: 5%;
   right: 7%;
+}
+
+.party{
+  background-image: url(party.png);
+}
+
+.party-off{
+  background-image: url(party-off.png);
+}
+
+.darkMode .party{
+  background-image: url(party-dark.png);
+}
+
+.darkMode .party-off{
+  background-image: url(party-off-dark.png);
+}
+
+#particle_button{
+  display: flex;
+  align-self: flex-end;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  background-size: 32px;
+  height: 32px;
+  width: 32px;
+  margin: 5px 5px 5px 5px;
+}
+
+body.party.darkMode{
+  background-image: url(snow.gif);
+}
+
+body.party{
+  background-image: url(conf.gif);
 }

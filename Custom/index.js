@@ -10,7 +10,9 @@ const lessonsTimeRef = document.querySelector(".lessons_time");
 const lessonsRef = document.querySelectorAll(".lessons");
 
 const themeBtn = document.getElementById("theme_button");
+const partyBtn = document.getElementById("particle_button");
 const darkModeKey = "darkModeEnabled";
+const PartyModeKey = "partyModeEnabled";
 
 const timetoMinutes = (time, delimiter) => {
   const timeParts = time.split(delimiter);
@@ -142,6 +144,21 @@ themeBtn.onclick = () => {
     enableDarkMode();
   } else {
     disableDarkMode();
+  }
+};
+
+const isPartyModeEnabled = localStorage.getItem(PartyModeKey) === "true";
+ isPartyModeEnabled ? partyBtn.classList.add("party"): partyBtn.classList.add("party-off")
+
+partyBtn.onclick = () => {
+  partyBtn.classList.toggle("party");
+  partyBtn.classList.toggle("party-off");
+  if (partyBtn.classList.contains("party-off")) {
+    document.body.classList.remove("party");
+    localStorage.setItem(PartyModeKey, "false");
+  } else {
+    document.body.classList.add("party");
+    localStorage.setItem(PartyModeKey, "true");
   }
 };
 
