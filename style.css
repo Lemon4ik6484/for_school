@@ -197,7 +197,7 @@ a {
 }
 
 .sun{
-  background-image: url(../images/sun.png);
+  background-image: url(./images/sun.png);
   background-size: 32px;
   height: 32px;
   width: 32px;
@@ -205,7 +205,7 @@ a {
 }
 
 .moon{
-  background-image: url(../images/moon.png);
+  background-image: url(./images/moon.png);
 }
 
 #theme_button{
@@ -217,19 +217,19 @@ a {
 }
 
 .party{
-  background-image: url(../images/party.png);
+  background-image: url(./images/party.png);
 }
 
 .party-off{
-  background-image: url(../images/party-off.png);
+  background-image: url(./images/party-off.png);
 }
 
 .darkMode .party{
-  background-image: url(../images/party-dark.png);
+  background-image: url(./images/party-dark.png);
 }
 
 .darkMode .party-off{
-  background-image: url(../images/party-off-dark.png);
+  background-image: url(./images/party-off-dark.png);
 }
 
 #particle_button{
@@ -245,9 +245,9 @@ a {
 }
 
 body.party.darkMode{
-  background-image: url(../images/snow.gif);
+  background-image: url(./images/snow.gif);
 }
 
 body.party{
-  background-image: url(../images/conf.gif);
+  background-image: url(./images/conf.gif);
 }
