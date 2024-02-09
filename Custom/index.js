@@ -147,9 +147,13 @@ themeBtn.onclick = () => {
   }
 };
 
-const isPartyModeEnabled = localStorage.getItem(PartyModeKey) === "true";
- isPartyModeEnabled ? partyBtn.classList.add("party"): partyBtn.classList.add("party-off")
-
+if (localStorage.getItem(PartyModeKey) === "true") {
+  partyBtn.classList.add("party")
+  document.body.classList.add("party")
+} else {
+  partyBtn.classList.add("party-off")
+  document.body.classList.remove("party")
+}
 partyBtn.onclick = () => {
   partyBtn.classList.toggle("party");
   partyBtn.classList.toggle("party-off");
