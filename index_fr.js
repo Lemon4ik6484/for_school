@@ -1,5 +1,5 @@
 import { lessons } from "./lessons.js";
-import { lessonsTime } from "./time.js";
+import { lessonsTime } from "./time_fr.js";
 
 // const days = ["Пн", "Вт", "Ср", "Чт", "Пт"];
 
@@ -7,11 +7,12 @@ import { lessonsTime } from "./time.js";
 
 const headerTextRef = document.querySelector(".header_text");
 const lessonsTimeRef = document.querySelector(".lessons_time");
-const lessonsDayRef = document.querySelectorAll(".lessons");
-const lessonsRef = document.querySelectorAll(".lesson");
+const lessonsRef = document.querySelectorAll(".lessons");
 
 const themeBtn = document.getElementById("theme_button");
+const partyBtn = document.getElementById("particle_button");
 const darkModeKey = "darkModeEnabled";
+const PartyModeKey = "partyModeEnabled";
 
 const timetoMinutes = (time, delimiter) => {
   const timeParts = time.split(delimiter);
@@ -20,16 +21,16 @@ const timetoMinutes = (time, delimiter) => {
 
 const updateTime = () => {
   const curDate = new Date();
-  const curTime = curDate.toLocaleTimeString("uk-UA", {
+  const curTime = curDate.toLocaleTimeString("fr-FR", {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
-    timeZone: "Europe/Kyiv", // Antarctica/South_Pole Europe/Kyiv
+    timeZone: "Europe/Paris", // Antarctica/South_Pole Europe/Kyiv
   });
-  headerTextRef.textContent = `Київський час: ${curTime}`;
+  headerTextRef.textContent = `Heure française: ${curTime}`;
 
   const curDay = curDate.getDay();
-  const dayRef = lessonsDayRef[curDay - 1];
+  const dayRef = lessonsRef[curDay - 1];
 
   if (curDay > 0 && curDay < 6) {
     const curLesson = lessonsTime.findIndex(
@@ -88,7 +89,7 @@ lessons.forEach((lesson) => {
     lessonRef.insertAdjacentHTML(
       "afterbegin",
       `<strong>
-      <a href="${lesson.link}" target="_blank">
+      <a href="${lesson.link}" target="_blank" class="no_link_black">
       ${lesson.title}
       </a>
       </strong>
@@ -143,6 +144,25 @@ themeBtn.onclick = () => {
     enableDarkMode();
   } else {
     disableDarkMode();
+  }
+};
+
+if (localStorage.getItem(PartyModeKey) === "true") {
+  partyBtn.classList.add("party")
+  document.body.classList.add("party")
+} else {
+  partyBtn.classList.add("party-off")
+  document.body.classList.remove("party")
+}
+partyBtn.onclick = () => {
+  partyBtn.classList.toggle("party");
+  partyBtn.classList.toggle("party-off");
+  if (partyBtn.classList.contains("party-off")) {
+    document.body.classList.remove("party");
+    localStorage.setItem(PartyModeKey, "false");
+  } else {
+    document.body.classList.add("party");
+    localStorage.setItem(PartyModeKey, "true");
   }
 };
 

@@ -1,5 +1,5 @@
 import { lessons } from "./lessons.js";
-import { lessonsTime } from "./time.js";
+import { lessonsTime } from "./time_ua.js";
 
 // const days = ["Пн", "Вт", "Ср", "Чт", "Пт"];
 
@@ -7,7 +7,8 @@ import { lessonsTime } from "./time.js";
 
 const headerTextRef = document.querySelector(".header_text");
 const lessonsTimeRef = document.querySelector(".lessons_time");
-const lessonsRef = document.querySelectorAll(".lessons");
+const lessonsDayRef = document.querySelectorAll(".lessons");
+const lessonsRef = document.querySelectorAll(".lesson");
 
 const themeBtn = document.getElementById("theme_button");
 const darkModeKey = "darkModeEnabled";
@@ -19,16 +20,16 @@ const timetoMinutes = (time, delimiter) => {
 
 const updateTime = () => {
   const curDate = new Date();
-  const curTime = curDate.toLocaleTimeString("fr-FR", {
+  const curTime = curDate.toLocaleTimeString("uk-UA", {
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
-    timeZone: "Europe/Paris", // Antarctica/South_Pole Europe/Kyiv
+    timeZone: "Europe/Kyiv", // Antarctica/South_Pole Europe/Kyiv
   });
-  headerTextRef.textContent = `Heure française: ${curTime}`;
+  headerTextRef.textContent = `Київський час: ${curTime}`;
 
   const curDay = curDate.getDay();
-  const dayRef = lessonsRef[curDay - 1];
+  const dayRef = lessonsDayRef[curDay - 1];
 
   if (curDay > 0 && curDay < 6) {
     const curLesson = lessonsTime.findIndex(
@@ -87,7 +88,7 @@ lessons.forEach((lesson) => {
     lessonRef.insertAdjacentHTML(
       "afterbegin",
       `<strong>
-      <a href="${lesson.link}" target="_blank" class="no_link_black">
+      <a href="${lesson.link}" target="_blank">
       ${lesson.title}
       </a>
       </strong>

@@ -14,7 +14,7 @@ header {
 }
 
 body.darkMode {
-    background-color: rgb(43, 41, 27);
+  background-color: rgb(43, 41, 27);
 }
 
 .container_ {
@@ -24,6 +24,16 @@ body.darkMode {
 .lesson {
   flex-grow: 3;
   padding: 0px;
+}
+
+.no_link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.no_link_black {
+  color: #000000;
+  text-decoration: none;
 }
 
 .link_button {
@@ -77,10 +87,6 @@ body.darkMode {
   font-weight: 700;
 }
 
-p {
-  text-align: center;
-}
-
 h1 {
   text-align: center;
 }
@@ -103,12 +109,63 @@ h1 {
   text-align: center;
 }
 
-.later {
-  background-color: #ffbf76;
+.no_margin{
+  margin: 0px;
+}
+
+.fr{
+  background-color: rgba(255, 250, 205, 0);
+  border: solid 5px;
+  border-color: rgb(52, 218, 218);
+}
+
+.ua{
+  background-color: rgba(255, 250, 205, 0);
+  border: solid 5px;
+  border-color: rgb(255, 159, 80);
+}
+
+.ua_fr{
+  background-color: rgba(255, 250, 205, 0);
+  border: solid 5px;
+  border-color: #76db17;
+}
+
+.lil_text.fr{
+  background-color: rgb(52, 218, 218);
+}
+
+.lil_text.ua{
+  background-color: rgb(255, 159, 80);
+}
+
+.lil_text.ua_fr{
+  background-color:  #76db17;
+}
+
+table.darkMode .fr{
+  background-color: rgba(43, 41, 27, 0);
+  border: solid 5px;
+  border-color: rgb(5, 173, 173);
+}
+
+table.darkMode .ua{
+  background-color: rgba(43, 41, 27, 0);
+  border: solid 5px;
+  border-color: rgb(216, 105, 14);
+}
+
+table.darkMode .ua_fr{
+  background-color: rgba(43, 41, 27, 0);
+  border: solid 5px;
+  border-color: #62b614;
 }
 
 .now {
   background-color: #b8ff76;
+}
+.later {
+  background-color: #ffbf76;
 }
 
 table.darkMode .later {
@@ -117,6 +174,12 @@ table.darkMode .later {
 
 table.darkMode .now {
   background-color: #418700;
+}
+
+.lil_text{
+  width: 300px;
+  height: 15px;
+  color:#000
 }
 
 .no_margin {
@@ -134,7 +197,7 @@ a {
 }
 
 .sun{
-  background-image: url(sun.png);
+  background-image: url(../images/sun.png);
   background-size: 32px;
   height: 32px;
   width: 32px;
@@ -142,10 +205,49 @@ a {
 }
 
 .moon{
-  background-image: url(moon.png);
+  background-image: url(../images/moon.png);
 }
 
 #theme_button{
   display: flex;
   align-self: flex-end;
+  position: absolute;
+  top: 5%;
+  right: 7%;
+}
+
+.party{
+  background-image: url(../images/party.png);
+}
+
+.party-off{
+  background-image: url(../images/party-off.png);
+}
+
+.darkMode .party{
+  background-image: url(../images/party-dark.png);
+}
+
+.darkMode .party-off{
+  background-image: url(../images/party-off-dark.png);
+}
+
+#particle_button{
+  display: flex;
+  align-self: flex-end;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  background-size: 32px;
+  height: 32px;
+  width: 32px;
+  margin: 5px 5px 5px 5px;
+}
+
+body.party.darkMode{
+  background-image: url(../images/snow.gif);
+}
+
+body.party{
+  background-image: url(../images/conf.gif);
 }
