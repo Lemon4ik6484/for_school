@@ -15,11 +15,6 @@ export const lessons = [
     link: "https://us04web.zoom.us/j/71160338554?pwd=cuRM5DuC4C5wbYVRs4U02ELBCngCLA.1",
   },
   {
-    name: "ukrliterature",
-    title: "Litt. Ukr.",
-    link: "https://us05web.zoom.us/j/8525252562?pwd=UytGVTVLV2RFWnh6bGU4RTFGU1FUdz09",
-  },
-  {
     name: "algebra",
     title: "Algèbre",
     link: "https://us04web.zoom.us/j/78388130486?pwd=cnTD7LvyaPHxKx7AmE7R7ox5kPetX3.1",
@@ -103,11 +98,6 @@ export const lessons = [
     name: "ukrliterature",
     title: "Litt. Ukr.",
     link: "https://us05web.zoom.us/j/8525252562?pwd=UytGVTVLV2RFWnh6bGU4RTFGU1FUdz09",
-  },
-  {
-    name: "computerscience",
-    title: "Informatique",
-    link: "https://us04web.zoom.us/j/8540626601?pwd=UkFyQWpFWW1GU0xSRnlteEMwSUNWdz09",
   },
   {
     name: "ench",
