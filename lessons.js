@@ -196,7 +196,7 @@ export const lessons = [
   {
     name: "ukrhistory_ua",
     title: "Історія України",
-    link: "https://us04web.zoom.us/j/9228531715?pwd=ZjBrVXFZRHQyU0puS1RGOGxzYUNLdz09",
+    link: "https://us05web.zoom.us/j/9757552189?pwd=dzZqenBRK3Q1QUVvUTgzbTlqN0dMUT09",
   },
   {
     name: "kharkiv_ua",
